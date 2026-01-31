@@ -15,6 +15,12 @@ run/main_scene="uid://dw6pcdo8tyq3t"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://_assets/icons/icon.svg"
 
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1080
+window/size/resizable=false
+
 [file_customization]
 
 folder_colors={
