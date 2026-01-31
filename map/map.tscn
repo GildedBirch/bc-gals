@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://b0nj1ylwxsnm7"]
+
+[ext_resource type="Script" uid="uid://djlp8rs841vcr" path="res://map/map.gd" id="1_hgrid"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgrid"]
+albedo_color = Color(0.31431612, 0.31431612, 0.3143161, 1)
+metallic_specular = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_a0dt8"]
+material = SubResource("StandardMaterial3D_hgrid")
+size = Vector3(14, 1, 1)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_hgrid"]
+plane = Plane(0, 0, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0dt8"]
+albedo_color = Color(0.072842635, 0.072842635, 0.072842635, 1)
+metallic_specular = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hgrid"]
+material = SubResource("StandardMaterial3D_a0dt8")
+size = Vector2(13, 13)
+
+[node name="Map" type="Node3D" unique_id=1450507479]
+script = ExtResource("1_hgrid")
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1567860497]
+unique_name_in_owner = true
+
+[node name="Borders" type="Node3D" parent="." unique_id=934948996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
+metadata/_edit_lock_ = true
+
+[node name="NorthBorder" type="MeshInstance3D" parent="Borders" unique_id=1491888554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.5, -0.5)
+mesh = SubResource("BoxMesh_a0dt8")
+metadata/_edit_lock_ = true
+
+[node name="NorthStaticBody" type="StaticBody3D" parent="Borders" unique_id=362953982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Borders/NorthStaticBody" unique_id=2112592860]
+shape = SubResource("WorldBoundaryShape3D_hgrid")
+
+[node name="SouthBorder" type="MeshInstance3D" parent="Borders" unique_id=1847284052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 13.5)
+mesh = SubResource("BoxMesh_a0dt8")
+metadata/_edit_lock_ = true
+
+[node name="SouthStaticBody" type="StaticBody3D" parent="Borders" unique_id=400994094]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 0, 13)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Borders/SouthStaticBody" unique_id=1105904829]
+shape = SubResource("WorldBoundaryShape3D_hgrid")
+
+[node name="WestBorder" type="MeshInstance3D" parent="Borders" unique_id=216302196]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, 0.5, 6)
+mesh = SubResource("BoxMesh_a0dt8")
+metadata/_edit_lock_ = true
+
+[node name="WestStaticBody" type="StaticBody3D" parent="Borders" unique_id=1638490129]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 0, 7)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Borders/WestStaticBody" unique_id=614713860]
+shape = SubResource("WorldBoundaryShape3D_hgrid")
+
+[node name="EastBorder" type="MeshInstance3D" parent="Borders" unique_id=1122641995]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.5, 0.5, 7)
+mesh = SubResource("BoxMesh_a0dt8")
+metadata/_edit_lock_ = true
+
+[node name="EastStaticBody" type="StaticBody3D" parent="Borders" unique_id=1206793473]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13, 0, 6)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Borders/EastStaticBody" unique_id=1810863495]
+shape = SubResource("WorldBoundaryShape3D_hgrid")
+
+[node name="Floor" type="MeshInstance3D" parent="Borders" unique_id=121780759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 6.5)
+mesh = SubResource("PlaneMesh_hgrid")
+metadata/_edit_lock_ = true

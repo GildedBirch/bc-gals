@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="BC Gals"
+run/main_scene="uid://dw6pcdo8tyq3t"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://_assets/icons/icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://_assets/": "gray",
+"res://_components/": "gray",
+"res://_core/": "gray",
+"res://_resources/": "gray"
+}
 
 [physics]
 
