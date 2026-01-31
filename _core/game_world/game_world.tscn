@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dn11nlb6e8vtd"]
+
+[ext_resource type="PackedScene" uid="uid://b0nj1ylwxsnm7" path="res://map/map.tscn" id="1_lnyxe"]
+[ext_resource type="Script" uid="uid://bdo0fle673lq6" path="res://_core/game_world/game_world.gd" id="1_t0jrh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t0jrh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_7ralj"]
+sky_material = SubResource("ProceduralSkyMaterial_t0jrh")
+
+[sub_resource type="Environment" id="Environment_1eoef"]
+background_mode = 2
+sky = SubResource("Sky_7ralj")
+tonemap_mode = 2
+
+[node name="GameWorld" type="Node" unique_id=1892909874]
+script = ExtResource("1_t0jrh")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2040117252]
+environment = SubResource("Environment_1eoef")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=696754902]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Map" parent="." unique_id=1450507479 instance=ExtResource("1_lnyxe")]
