@@ -1,2 +1,2 @@
 # bc-gals
-Game for Core Mechanics Challenge Winter 2024
+Game for Core Mechanics Challenge Winter 2025
