@@ -48,21 +48,3 @@ func _spawn_bricks(pos: Vector3i) -> void:
 
 func _spawn_walls(pos: Vector3i) -> void:
 	grid_map.set_cell_item(pos, 1)
-
-#func draw_point(pos: Vector3, radius: float = 0.05, color: Color = Color.WHITE_SMOKE) -> MeshInstance3D:
-	#var mesh_instance: MeshInstance3D = MeshInstance3D.new()
-	#var sphere_mesh: SphereMesh = SphereMesh.new()
-	#var material: ORMMaterial3D = ORMMaterial3D.new()
-	#
-	#mesh_instance.mesh = sphere_mesh
-	#mesh_instance.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	#mesh_instance.position = pos
-	#
-	#sphere_mesh.radius = radius
-	#sphere_mesh.height = radius * 2.0
-	#sphere_mesh.material = material
-	#
-	#material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	#material.albedo_color = color
-	#
-	#return mesh_instance
