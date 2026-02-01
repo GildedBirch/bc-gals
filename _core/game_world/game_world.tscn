@@ -26,3 +26,19 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Map" parent="." unique_id=1450507479 instance=ExtResource("1_lnyxe")]
+unique_name_in_owner = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=646092292]
+transform = Transform3D(1, 0, 0, 0, 0.25881904, 0.9659259, 0, -0.9659259, 0.25881904, 6, 13, 10)
+
+[node name="Players" type="Node3D" parent="." unique_id=665983917]
+unique_name_in_owner = true
+
+[node name="Enemies" type="Node3D" parent="." unique_id=1109634972]
+unique_name_in_owner = true
+
+[node name="Bullets" type="Node3D" parent="." unique_id=644053286]
+unique_name_in_owner = true
+
+[node name="Powerups" type="Node3D" parent="." unique_id=464693626]
+unique_name_in_owner = true
