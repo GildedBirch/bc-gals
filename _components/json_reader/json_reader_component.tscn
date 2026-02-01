@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://btsnfujm4tkao"]
+
+[ext_resource type="Script" uid="uid://dlqplwoaddsr" path="res://_components/json_reader/json_reader_component.gd" id="1_gikec"]
+
+[node name="JsonReaderComponent" type="Node" unique_id=1379137135]
+script = ExtResource("1_gikec")
