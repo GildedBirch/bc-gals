@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b0nj1ylwxsnm7"]
 
 [ext_resource type="Script" uid="uid://djlp8rs841vcr" path="res://map/map.gd" id="1_hgrid"]
+[ext_resource type="PackedScene" uid="uid://btsnfujm4tkao" path="res://_components/json_reader/json_reader_component.tscn" id="2_a0dt8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgrid"]
 albedo_color = Color(0.31431612, 0.31431612, 0.3143161, 1)
@@ -83,3 +84,7 @@ shape = SubResource("WorldBoundaryShape3D_hgrid")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 6.5)
 mesh = SubResource("PlaneMesh_hgrid")
 metadata/_edit_lock_ = true
+
+[node name="JsonReaderComponent" parent="." unique_id=1379137135 instance=ExtResource("2_a0dt8")]
+unique_name_in_owner = true
+folder = "res://levels/"
