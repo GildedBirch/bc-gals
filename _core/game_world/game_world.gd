@@ -10,4 +10,4 @@ extends Node
 
 
 func _ready() -> void:
-	map.load_level(0)
+	map.load_level(1)
