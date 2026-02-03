@@ -1,0 +1,2 @@
+class_name DefenseObjective
+extends Node3D
