@@ -42,3 +42,6 @@ unique_name_in_owner = true
 
 [node name="Powerups" type="Node3D" parent="." unique_id=464693626]
 unique_name_in_owner = true
+
+[node name="DefenseObjectives" type="Node3D" parent="." unique_id=1379385946]
+unique_name_in_owner = true
