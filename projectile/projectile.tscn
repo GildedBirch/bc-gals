@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://d04se4ti56cs3"]
+
+[ext_resource type="Script" uid="uid://5vyabetk11y" path="res://projectile/projectile.gd" id="1_6aa83"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_6aa83"]
+radius = 0.3
+height = 0.6
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_makwg"]
+radius = 0.3
+
+[node name="Projectile" type="Node3D" unique_id=1663318646]
+script = ExtResource("1_6aa83")
+speed = 10.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1984189922]
+mesh = SubResource("SphereMesh_6aa83")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=954053073]
+unique_name_in_owner = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=237335747]
+shape = SubResource("SphereShape3D_makwg")
+debug_color = Color(0.99215686, 0, 0.23921569, 0.7607843)
+
+[node name="Raycasts" type="Node3D" parent="." unique_id=437894269]
+
+[node name="Ray0" type="RayCast3D" parent="Raycasts" unique_id=192146319]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.375, 0, 0)
+target_position = Vector3(0, 0, -0.35)
+
+[node name="Ray1" type="RayCast3D" parent="Raycasts" unique_id=1378311170]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0, 0)
+target_position = Vector3(0, 0, -0.35)
+
+[node name="Ray2" type="RayCast3D" parent="Raycasts" unique_id=304851229]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0, 0)
+target_position = Vector3(0, 0, -0.35)
+
+[node name="Ray3" type="RayCast3D" parent="Raycasts" unique_id=984276804]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.375, 0, 0)
+target_position = Vector3(0, 0, -0.35)

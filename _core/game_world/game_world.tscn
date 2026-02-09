@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b0nj1ylwxsnm7" path="res://map/map.tscn" id="1_lnyxe"]
 [ext_resource type="Script" uid="uid://bdo0fle673lq6" path="res://_core/game_world/game_world.gd" id="1_t0jrh"]
+[ext_resource type="PackedScene" uid="uid://d04se4ti56cs3" path="res://projectile/projectile.tscn" id="3_7ralj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t0jrh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -39,6 +40,18 @@ unique_name_in_owner = true
 
 [node name="Bullets" type="Node3D" parent="." unique_id=644053286]
 unique_name_in_owner = true
+
+[node name="Projectile" parent="Bullets" unique_id=1663318646 instance=ExtResource("3_7ralj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.489, 0.5, 11)
+
+[node name="Projectile2" parent="Bullets" unique_id=431743156 instance=ExtResource("3_7ralj")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.48900032, 0.5, 7)
+
+[node name="Projectile4" parent="Bullets" unique_id=853300113 instance=ExtResource("3_7ralj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.489, 0.5, 12.5)
+
+[node name="Projectile3" parent="Bullets" unique_id=332459632 instance=ExtResource("3_7ralj")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 7.489, 0.5, 0.5)
 
 [node name="Powerups" type="Node3D" parent="." unique_id=464693626]
 unique_name_in_owner = true
